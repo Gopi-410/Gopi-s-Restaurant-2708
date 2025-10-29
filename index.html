@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gopi's Restaurant — Home</title>
+  <meta name="description" content="Gopi's Restaurant — authentic Indian flavors, menu, contact and more on one page." />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">GC</div>
+      <div>
+        <h1>Gopi's Restaurant</h1>
+        <p class="tag">Where Taste Meets Tradition</p>
+      </div>
+    </div>
+
+    <!-- Search bar in header (filters menu) -->
+    <div class="search-wrap">
+      <label for="menuSearch" class="visually-hidden">Search menu</label>
+      <input id="menuSearch" type="search" placeholder="Search dishes (e.g. biryani, paneer)..." aria-label="Search menu">
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="main-nav" aria-label="Main navigation">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO / HOME -->
+  <section id="home" class="hero" aria-labelledby="hero-heading">
+    <div class="hero-content">
+      <h2 id="hero-heading">Welcome to Gopi's Restaurant</h2>
+      <p>Simple, honest Indian food — family recipes, fresh spices, and warm hospitality.</p>
+      <p>Every dish is prepared with love, bringing you the rich aromas and flavors of India’s heart.</p>
+      <p>Come, experience the warmth of homemade meals served with a touch of tradition and care.</p>
+      <a class="btn primary" href="#menu">See Menu</a>
+    </div>
+    <div class="hero-image" aria-hidden="true">
+      <img src="LOGO.jpg" alt="Signature Indian dish">
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section container" aria-labelledby="about-heading">
+    <h3 id="about-heading">About Us</h3>
+    <p>  Welcome to <strong>Gopi’s Restaurant</strong> — a place where every meal tells a story. 
+    What started as a small family kitchen has now grown into a cozy restaurant where 
+    traditional flavors meet a modern touch. Our goal has always been simple — 
+    to serve food that feels like home.</p>
+
+     <p>
+    Every dish on our menu is made from fresh ingredients and prepared with love. 
+    From the rich aroma of biryani to the creamy texture of butter chicken, 
+    each recipe has been passed down through generations, keeping the authentic taste alive.
+  </p>
+    
+    <p>
+    We believe that good food brings people together. 
+    Whether you’re here for a family dinner, a celebration, or a quick meal, 
+    we promise to make your experience warm, flavorful, and memorable. 
+    Come and taste the tradition — one bite at a time.
+  </p>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu" class="section container" aria-labelledby="menu-heading">
+    <h3 id="menu-heading">Menu — Popular Dishes</h3>
+    <p class="muted">Tip: use the search bar at top to quickly find dishes.</p>
+
+    <!-- Category filters (optional) -->
+    <div class="filters">
+      <button class="filter-btn active" data-cat="all">All</button>
+      <button class="filter-btn" data-cat="veg">Veg</button>
+      <button class="filter-btn" data-cat="nonveg">Non-Veg</button>
+      <button class="filter-btn" data-cat="dessert">Dessert</button>
+    </div>
+
+    <!-- Grid of dishes (data-name & data-desc used for search) -->
+    <div class="grid" id="menuGrid">
+      <article class="dish" data-cat="nonveg" data-name="butter chicken" data-desc="rich tomato gravy chicken">
+        <img src="butter-chicken.jpg" alt="Butter Chicken">
+        <h4>Butter Chicken</h4>
+        <p>Rich tomato gravy, soft chicken — a comforting classic. ₹220</p>
+      </article>
+
+      <article class="dish" data-cat="veg" data-name="paneer tikka" data-desc="grilled paneer smoky">
+        <img src="paneer-tikka.jpg" alt="Paneer Tikka">
+        <h4>Paneer Tikka</h4>
+        <p>Marinated cottage cheese grilled to smoky perfection. ₹180</p>
+      </article>
+
+      <article class="dish" data-cat="nonveg" data-name="hyderabadi biryani" data-desc="saffron rice meat">
+        <img src="hyderabadi-biryani.jpg" alt="Hyderabadi Biryani">
+        <h4>Hyderabadi Biryani</h4>
+        <p>Saffron rice layered with tender meat and fragrant spices. ₹280</p>
+      </article>
+
+      <article class="dish" data-cat="veg" data-name="dal tadka" data-desc="yellow lentils tempered">
+        <img src="dal-tadka.jpg" alt="Dal Tadka">
+        <h4>Dal Tadka</h4>
+        <p>Yellow lentils tempered with garlic and spices. ₹120</p>
+      </article>
+
+      <article class="dish" data-cat="dessert" data-name="gulab jamun" data-desc="milk dumplings syrup">
+        <img src="gulab-jamun.jpg" alt="Gulab Jamun">
+        <h4>Gulab Jamun</h4>
+        <p>Soft milk dumplings soaked in rose syrup. ₹80</p>
+      </article>
+
+      <article class="dish" data-cat="veg" data-name="butter naan" data-desc="soft flatbread buttered">
+        <img src="butter-naan.jpg" alt="Butter Naan">
+        <h4>Butter Naan</h4>
+        <p>Soft, fluffy naan brushed with butter. ₹40</p>
+      </article>
+    </div>
+
+    <!-- 'no results' placeholder -->
+    <p id="noResults" class="muted" style="display:none;margin-top:12px">No dishes matched your search.</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact container" aria-labelledby="contact-heading">
+    <h3 id="contact-heading">Contact</h3>
+    <p>📍 Kalimandir, Hyderabad<br>
+       📞 +91 80194 48558<br>
+       ✉️ <a href="mailto:gopisrestaurant@gmail.com">gopisrestaurant@gmail.com</a></p>
+    <p><strong>Hours:</strong> Mon–Sun: 11:00 AM – 11:00 PM</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <small>© 2025 Gopi's Restaurant — Built by you</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
